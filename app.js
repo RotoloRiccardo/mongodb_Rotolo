@@ -27,12 +27,10 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
 const dev_db_url =
-  "mongodb+srv://riccardorotolo:mauromarchesan@cluster0.1c15lej.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
-
+"mongodb+srv://riccardorotolo:saturnino123@cluster0.j5rvg7g.mongodb.net/local_library?retryWrites=true&w=majority&appName=Cluster0";
 main().catch((err) => console.log(err));
 async function main() {
-  await mongoose.connect(mongoDB);
+  await mongoose.connect(dev_db_url);
 }
 
 // view engine setup
